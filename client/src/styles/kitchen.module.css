@@ -1,0 +1,52 @@
+.pending {
+    height: 0.5rem;
+    width: 0.5rem !important;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 0 10px rgb(41, 1, 1);
+    animation: pulse 1s infinite alternate; /* Add animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px rgba(43, 1, 1, 0.7);
+    }
+    50% {
+      box-shadow:0 0 10px rgb(96, 2, 2); /* Increase shadow size */
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+    }
+  }
+.completed{
+    height: 0.5rem;
+    width: 0.5rem !important;
+    border-radius: 50%;
+    background-color: green;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.7); /* Dark green shadow */
+}
+.accordionParent{
+    min-width: 75vw;
+    margin:1rem auto 0 auto;
+    max-width: 75vw;
+}
+.progress{
+  /* min-width: 100%; */
+  margin: auto;
+  height: 5rem;
+  width: 5rem;
+}
+.containerProgress{
+  min-width: 100%;
+  margin: auto;
+  display: flex;  
+  align-items: center;
+  min-height: 50vh;
+}
+
+@media only screen and (max-width:560px){
+  .AccBody{
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+}

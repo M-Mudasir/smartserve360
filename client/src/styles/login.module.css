@@ -1,0 +1,164 @@
+.main {
+    position: relative;
+    width: 100%;
+    /* Set the width of your container */
+    height: 100vh;
+    /* Set the height of your container */
+    background-color: #EDF1F7;
+    /* Set a background color if needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Ensure the image doesn't overflow the container */
+}
+
+.image {
+    position: absolute;
+    bottom: 0;
+    /* border: 1px solid hotpink; */
+    right: 0;
+    /* width: 40%; */
+    /* Set the width of the bottom right image */
+    /* height: 80%; */
+    /* Set the height of the bottom right image */
+    background-image: url('../media/login.png');
+    background-size: contain;
+    /* Adjust as needed */
+    /* bottom: 10%; */
+    background-position: right;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+
+    /* Prevent repeating if the image is smaller than the container */
+}
+
+.image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.headings {
+    max-width: 43%;
+    z-index: 1;
+}
+
+.elevate {
+    color: #212529;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 76.8px;
+    /* 120% */
+}
+
+.experience {
+    color: #58a188;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 76.8px;
+    /* 120% */
+}
+
+.form {
+    /* border: 1px solid red; */
+    height: fit-content;
+    width: 30%;
+    z-index: 1;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+.paragraph {
+    color: #757F8E;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.forgotPassword {
+    color: #6C757D;
+    cursor: pointer;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    /* 161.538% */
+}
+
+.registerHere {
+    color: #212529;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    /* 150% */
+    margin-top: 0.5rem;
+}
+
+.reg {
+    color: #0DCAF0;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 160% */
+}
+
+@media only screen and (max-width:1200px) {
+    .headings {
+        max-width: 50% !important;
+        /* border: 1px solid red; */
+    }
+
+    .form {
+        width: 40%;
+    }
+
+    .elevate {
+        font-size: 44px;
+    }
+
+    .experience {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .elevate {
+        font-size: 33px;
+    }
+
+    .experience {
+        font-size: 33px;
+        line-height: 30.8px;
+    }
+
+    .form {
+        width: 45%;
+    }
+
+}
+@media only screen and (max-width:690px){
+    .main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .form{
+        width: 90%;
+    }
+    .headings{
+        min-width: 90%;
+    }
+
+}

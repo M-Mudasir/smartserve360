@@ -1,0 +1,62 @@
+.tableHeadings {
+    color: #58a188 !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 21.6px;
+    background-color: #F6F6FE;
+}
+
+.tableButton {
+    background: #4154F1 !important;
+    width: 140px;
+}
+
+.tableButton:hover {
+    color: white;
+    background: #4153f1be !important;
+
+}
+
+.tableButtonApproved {
+    background: #4CE1B6 !important;
+    width: 140px;
+}
+
+.tableButtonApproved:hover {
+    color: white;
+    background: #4ce1b7bb !important;
+
+}
+
+.tableButtonCancelled {
+    background: #d46363 !important;
+    width: 140px;
+}
+
+.tableButtonCancelled:hover {
+    color: white;
+    background: #d46363b0 !important;
+
+}
+
+
+.tableColumnName {
+    color: #444444;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+    padding: 11px 12px 11px 12px;
+    /* 160% */
+}
+
+.cell {
+    color: #7D7D7D;
+    font-size: 13px;
+    text-align: center;
+}
+
+.header {
+    font-size: 18;
+    color: #012970;
+}

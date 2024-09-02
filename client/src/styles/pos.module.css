@@ -1,0 +1,617 @@
+.pos {
+    padding: 1rem;
+    width: 100%;
+}
+
+.top {
+    min-width: 90%;
+    background-color: white;
+    display: flex;
+    margin: auto;
+
+    padding: 1.5rem;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4.2rem 0 3.6rem;
+    font-weight: 500;
+}
+
+.addMenu {
+    background-color: #CFDFFF !important;
+    color: #4154F1;
+    font-size: 13px;
+    line-height: 24px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 0.7rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addMenu:hover {
+    background-color: #5977c5 !important;
+    color: white;
+}
+
+.confirm {
+    cursor: pointer;
+    float: right;
+}
+
+.deals {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cart {
+    width: 5rem;
+    cursor: pointer;
+}
+
+.dealName {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0.3rem 0.5rem 0.3rem;
+}
+
+.item {
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+}
+
+.bottom {
+    margin-top: 1rem;
+}
+
+.POSparent {
+    /* border: 1px solid red; */
+    display: flex;
+    max-width: 83vw !important;
+    gap: 1rem;
+}
+
+.left {
+    /* border: 1px solid green; */
+    max-width: 75% !important;
+    min-width: 75%;
+    max-height: 85vh !important;
+    overflow-y: scroll;
+}
+
+.right {
+    /* border: 1px solid goldenrod; */
+    max-width: 25%;
+    min-width: 25%;
+    position: relative;
+    min-height: 88vh;
+}
+
+.dealsParent {
+    /* border: 1px solid firebrick; */
+    display: flex;
+
+}
+
+.menuParent {
+    /* border: 1px solid darkblue; */
+}
+
+.dealCard {
+    height: 11rem;
+    width: 17rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0.6rem;
+    background: rgba(255, 255, 255, 0.5) url('../media/image-removebg-preview.png') right center;
+    background-position: right center;
+    background-repeat: repeat;
+    background-size: contain;
+    transition: transform 0.2s ease-in;
+}
+
+.dealCard:hover {
+    transform: scale(1.1);
+
+}
+
+.listOfDealItems {
+    display: flex;
+    font-size: 13px;
+    flex-direction: column;
+    padding: 0.6rem;
+    position: relative;
+    padding-bottom: 0.1rem;
+    bottom: 0;
+    max-height: 8rem !important;
+    /* min-height: 6rem; */
+}
+
+.dealTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem;
+}
+
+.dealTopLeft {}
+
+.dealTopRight {
+    font-size: 15px;
+    color: gray;
+    font-weight: 400;
+}
+
+.singleItem {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    min-width: 100%;
+    align-self: center;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.itemQuantity {
+    color: gray;
+    font-weight: 500;
+}
+
+.itemPrice {
+    color: gray;
+    font-weight: 500;
+    position: absolute;
+    top: 100%;
+    right: 3%;
+}
+
+.dealName {
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 0.3rem;
+}
+
+.carouselContainer {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.addToOrderButton {
+    width: 0;
+    /* Initially hide the button */
+    overflow: hidden;
+    /* Hide overflowing content */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+        /* Adjust as needed */
+    }
+}
+
+.addToOrderButton.visible {
+    animation: slideIn 0.3s ease forwards;
+    /* Apply the animation */
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+}
+
+.tab {
+    font-size: 14px;
+    /* border: 1px solid blue; */
+    border-radius: 70px;
+    height: 1.8rem;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    width: fit-content;
+    background-color: white;
+}
+
+.menuCardParent {
+    /* border: 1px solid goldenrod; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 0.7rem;
+    flex-direction: row;
+    margin: 0.5rem;
+
+    margin-top: 1.2rem;
+}
+
+.menuCard {
+    max-width: 30%;
+    min-width: 30%;
+    height: auto;
+    /* border: 1px solid red; */
+    border-radius: 13px;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itemName {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.cardBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+}
+
+.menuControl {
+    display: flex;
+    align-items: center;
+
+}
+
+.control {
+    background-color: lightgray;
+    /* margin: 0.4rem; */
+    padding: 0.3rem;
+}
+
+.menuQuantity {
+    margin: 0 0.5rem 0 0.5rem;
+
+}
+
+.menuPrice {
+    color: #ee9b00;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.menuHead {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    margin-left: 0;
+    font-weight: 400 !important;
+}
+
+.menuImg {
+
+    max-height: 10.5rem;
+    max-width: 13.5rem;
+    min-width: 100%;
+    min-height: 10.5rem;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.control:nth-child(1) {
+    background-color: #ee9b00;
+    color: white;
+}
+
+.control:nth-child(1):hover {
+    color: black;
+}
+
+.detail {
+    border: 0.5px solid rgb(184, 184, 184);
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    margin-top: 0.5rem;
+    border-radius: 7px;
+}
+
+.detailHead {
+    color: grey;
+    display: flex;
+    align-items: center;
+    margin-right: 0.6rem;
+}
+
+.detailName {
+    font-weight: 400;
+    text-transform: capitalize;
+    text-overflow: clip;
+}
+
+.orderCardParent {
+    display: flex;
+    flex-direction: column;
+    max-height: 35vh;
+    overflow-y: scroll;
+    /* border: 1px solid yellow; */
+}
+
+.orderCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.orderDetails {
+    display: flex;
+    max-width: 70%;
+    padding-left: 0.5rem;
+    flex-direction: column;
+}
+
+.orderImg {
+    max-height: 3.5rem;
+    max-width: 3.5rem;
+    background-size: cover;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.orderLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.orderRight {
+    background-color: grey;
+    color: white;
+    border-radius: 4px;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.3rem 0.4rem;
+}
+
+.orderDetailsPrice {
+    color: #ee9b00;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.orderDetailsName {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.customizationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.customizationParent {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.deleteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom {
+    border: 0.5px solid #58a188;
+    background-color: #c2c7ec;
+    color: #58a188;
+    padding: 0.2rem;
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 3px;
+
+}
+
+.orderCardContainer {
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+
+.billParent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+    position: absolute;
+    bottom: 0%;
+    /* border: 1px solid red; */
+    width: 100%;
+
+}
+
+.bill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.3rem;
+
+}
+
+.billHead {
+    color: gray;
+
+}
+
+.billPrice {
+    font-weight: 500;
+}
+
+.completeBtn {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin: 0.4rem;
+}
+
+.customizationInstructions {
+    color: #58a188;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.progress {
+    /* min-width: 100%; */
+    margin: auto;
+    height: 3rem;
+    width: 3rem;
+}
+
+.containerProgress {
+    min-width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.cart {
+    display: none !important;
+}
+
+@media only screen and (max-width:1400px) {
+    .cart {
+        display: inline !important;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        min-width: 100%;
+    }
+
+    .POSparent {
+        /* border: 1px solid red; */
+        width: 100%;
+        flex-wrap: wrap;
+        min-width: 100%;
+    }
+
+    .billParent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .orderCardParent {
+        max-height: 20vh;
+        overflow-y: scroll;
+    }
+
+    .menuCard {
+        max-width: 20rem;
+        min-width: 15rem;
+    }
+
+    .menuCardParent {
+        /* border: 1px solid purple; */
+        /* justify-content: space-evenly; */
+    }
+
+}
+
+@media only screen and (max-width:1066px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 14rem;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 13.8rem;
+    }
+}
+
+@media only screen and (max-width:1014px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 13.5rem;
+    }
+}
+
+@media only screen and (max-width:997px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 13.3rem;
+    }
+}
+
+@media only screen and (max-width:985px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 13.1rem;
+    }
+}
+
+@media only screen and (max-width:971px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 12.8rem;
+    }
+}
+
+@media only screen and (max-width:966px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 12.5rem;
+    }
+}
+
+@media only screen and (max-width:952px) {
+    .menuCard {
+        /* max-width: 10rem; */
+        min-width: 12.1rem;
+    }
+}
+
+@media only screen and (max-width:579px) {
+    .cartParent {
+
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+}
+
+@media only screen and (max-width:450px){
+.menuCard{
+    width: 17.1rem;
+}
+.menuCardParent{
+    justify-content: center !important;
+}
+}
+@media only screen and (min-width:900px) and (max-width:912px){
+    .menuCard{
+        width: 17.1rem;
+    }
+}

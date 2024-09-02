@@ -1,0 +1,34 @@
+.inventory {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    max-width: 97% !important;
+}
+.tableContainer{
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem 1rem 0 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.progress{
+    /* min-width: 100%; */
+    margin: auto;
+    height: 5rem;
+    width: 5rem;
+}
+.containerProgress{
+    min-width: 100%;
+    margin: auto;
+    display: flex;  
+    align-items: center;
+    min-height: 50vh;
+}
+@media only screen and (max-width:650px){
+    .header{
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        margin-bottom: 1rem;
+    }
+}

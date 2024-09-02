@@ -1,0 +1,13 @@
+.image{    
+    width: 500px;
+}
+
+@media (max-width: 780px) {
+    /* Your styles for screens with a minimum width of 760 pixels and above */
+    .image {
+        display: none;
+    }
+  
+    /* Add more styles as needed */
+  }
+  

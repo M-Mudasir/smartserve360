@@ -1,0 +1,87 @@
+.headerx {
+    min-height: 2.5rem;
+    background: linear-gradient(45deg, #58a188, #85cab2);
+    min-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 10%;
+}
+
+.cross {
+    color: white;
+
+    float: right;
+}
+
+.question {
+    background-color: #58a188;
+    padding: 0.4rem;
+    border-radius: 7px;
+    border-bottom-right-radius: 0px;
+    margin: 0.7rem;
+    width: fit-content;
+    color: white;
+    max-width: 15rem;
+    align-self: flex-end;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.answer {
+    background-color: #f0f4fb;
+    padding: 0.4rem;
+    border-radius: 7px;
+    border-bottom-left-radius: 0px;
+    margin-left: 0.7rem;
+    width: fit-content;
+    color: black;
+    font-size: 14px;
+    word-wrap: break-word;
+    max-width: 16rem;
+    white-space: pre-line;
+}
+.recipeAnswer{
+    border-radius: 7px;
+      border-top-left-radius: 0px;
+      margin-left: 0.3rem;
+  }
+.body {
+    overflow-y: scroll;
+    min-height: 18rem;
+    margin-bottom: 4rem;
+
+}
+
+.input {
+    border: 0.5px solid rgb(217, 214, 214);
+    border-radius: 5px;
+    width: 80%;
+    height: 2.4rem;
+}
+
+.userInput {
+    min-width: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0 !important;
+}
+
+
+.botImg{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.3rem;
+    border-radius: 50%;
+}
+.botAnswer{
+    display: flex;
+}
+.prompt{
+    background-color: rgb(235, 233, 233);
+    margin: 0.9rem;
+    padding: 0.6rem;
+    border-radius: 5px;
+    color: grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}

@@ -1,0 +1,68 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Build
+  displayName: 'Build and Package'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install --prefix client/
+      npm run build --prefix client/
+      npm run copy-build --prefix client/
+      rm -rf $(System.DefaultWorkingDirectory)/client
+    displayName: 'Build Client'
+
+  # - script: |
+  #     npm install 
+  #   displayName: 'Server Dependencies'
+
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/node-app.zip'
+      replaceExistingArchive: true
+    displayName: 'Archive Build'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
+
+- job: Deploy
+  displayName: 'Deploy to Azure App Service'
+  dependsOn: Build
+  steps:
+  - task: DownloadBuildArtifacts@0
+    inputs:
+      buildType: 'current'
+      downloadType: 'single'
+      artifactName: 'drop'
+      downloadPath: '$(System.ArtifactsDirectory)'
+    displayName: 'Download Artifact'
+
+  - script: |
+      cd $(System.ArtifactsDirectory)/drop
+      unzip node-app.zip -d node-app
+    displayName: 'Unzip Artifact'
+
+  - task: AzureRmWebAppDeployment@4
+    inputs:
+      azureSubscription: 'SmartServe360SrvConn'
+      appType: 'webAppLinux'
+      WebAppName: 'smartserve360'
+      packageForLinux: '$(System.ArtifactsDirectory)/drop/node-app'
+      RuntimeStack: 'NODE|18-lts'
+      StartupCommand: 'npm install && npm run prod-migrate && npm start'
+      enableCustomDeployment: true

@@ -1,0 +1,98 @@
+.sidebar {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px #0129701a;
+    min-height: 98vh;
+    min-width: 250px;
+    font-weight: var(--fontWeight);
+    border-radius: 12px;
+    margin: 0.3rem;
+    /* border: 1px solid red; */
+}
+
+
+.sidebar .ulSidebarNav {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 15px;
+    /* height: 384px; */
+    left: 20px;
+    top: 20px;
+    position: relative;
+    width: 80%;
+    margin-top: 4rem;
+    /* border: 1px solid red; */
+}
+
+.sidebar .a {
+    align-items: center;
+    align-self: stretch;
+    /* border: 1px solid yellow; */
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    gap: 8px;
+    height: 44px;
+    padding: 8px 10px;
+    cursor: pointer;
+    position: relative;
+    width: 90%;
+}
+
+.sidebar .textWrapper {
+    color: #012970;
+    font-weight: var(--fontWeight);
+    font-size: 15px;
+    /* font-weight: 600; */
+    /* border: 1px solid darkblue; */
+    height: 90px;
+    margin: auto;
+    letter-spacing: 0;
+    /* line-height: 22.5px; */
+    position: relative;
+    white-space: nowrap;
+    /* width: 200.75px; */
+}
+
+.sidebar .divv {
+    color: #899bbd;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 16.5px;
+    position: relative;
+    white-space: nowrap;
+    /* border: 1px solid red; */
+
+
+    /* border: 1px solid red; */
+}
+.userDiv{
+    /* border: 0.5px solid grey; */
+    margin: 0.6rem;
+    border-radius: 9px;
+    width: 95%;
+    padding: 0.3rem;
+    margin-left: 0rem;
+    position: absolute;
+    bottom: 0%;
+ 
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+.profileImgJpg {
+    height: 45px;
+    width: 52px;
+  }
+  .user{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+@media only screen and (max-width:900px) {
+    .sidebar {
+        display: none;
+    }
+}
